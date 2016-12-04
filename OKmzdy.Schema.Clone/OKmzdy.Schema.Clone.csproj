@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F27194F-4EAC-47B6-9A2F-D24BD000F10E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OKmzdy.Schema.Clone</RootNamespace>
+    <AssemblyName>OKmzdy.Schema.Clone</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CloneIndexDefInfo.cs" />
+    <Compile Include="CloneIndexFieldDefInfo.cs" />
+    <Compile Include="CloneQueryDefInfo.cs" />
+    <Compile Include="CloneQueryEndClauses.cs" />
+    <Compile Include="CloneQueryFieldDefInfo.cs" />
+    <Compile Include="CloneQueryFilterDefInfo.cs" />
+    <Compile Include="CloneQueryJoinDefInfo.cs" />
+    <Compile Include="CloneQueryJoinFieldDefInfo.cs" />
+    <Compile Include="CloneQueryTableDefInfo.cs" />
+    <Compile Include="CloneQueryWhereDefInfo.cs" />
+    <Compile Include="CloneRelationDefInfo.cs" />
+    <Compile Include="CloneRelationFieldDef.cs" />
+    <Compile Include="CloneSchemaTransformation.cs" />
+    <Compile Include="CloneTableDefInfo.cs" />
+    <Compile Include="CloneTableFieldDefInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OKmzdy.Schema\OKmzdy.Schema.csproj">
+      <Project>{DFC040A1-2E29-4983-A1EC-2B6E346C3AF5}</Project>
+      <Name>OKmzdy.Schema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

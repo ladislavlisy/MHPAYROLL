@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A450D27-91CA-49B9-BAB2-FBCE53D98C4C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ModernizerConsoleApp</RootNamespace>
+    <AssemblyName>ModernizerConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OKmzdy.Generators.SchemaSource\OKmzdy.Generators.SchemaSource.csproj">
+      <Project>{4C523865-1075-4C06-B1E2-F8BE4BF98B94}</Project>
+      <Name>OKmzdy.Generators.SchemaSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.AppRegistry\OKmzdy.AppRegistry.csproj">
+      <Project>{79AF0FEE-07B8-46E3-BDED-3E98EB1F64B5}</Project>
+      <Name>OKmzdy.AppRegistry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.AppParams.XmlFile\OKmzdy.AppParams.XmlFile.csproj">
+      <Project>{64ED4034-524D-45A9-B2C9-3DD916C5CE43}</Project>
+      <Name>OKmzdy.AppParams.XmlFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.Schema.Utils\OKmzdy.Schema.Utils.csproj">
+      <Project>{CC267C34-50B1-4CEF-8116-1E59E03D26DA}</Project>
+      <Name>OKmzdy.Schema.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.Schema.Database\OKmzdy.Schema.Database.csproj">
+      <Project>{A6410A6B-FC84-46D6-B35D-1E633BAD0B70}</Project>
+      <Name>OKmzdy.Schema.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.Schema\OKmzdy.Schema.csproj">
+      <Project>{DFC040A1-2E29-4983-A1EC-2B6E346C3AF5}</Project>
+      <Name>OKmzdy.Schema</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OKmzdy.Schema.Clone\OKmzdy.Schema.Clone.csproj">
+      <Project>{7F27194F-4EAC-47B6-9A2F-D24BD000F10E}</Project>
+      <Name>OKmzdy.Schema.Clone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
